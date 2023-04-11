@@ -1,0 +1,272 @@
+@charset "uft-8";
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    line-height: 1;
+    color: #333;
+    font-family: 'GmarketSansMedium';
+    max-width: 520px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.inner {
+    max-width: 100%;
+    width: calc(100% - 40px);
+    /* max-width보다 해상도가 작은 경우 width값이 적용이된다. */
+    margin: 0 auto;
+}
+
+
+/***** 🍀header *****/
+
+header {
+    height: 70px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+}
+
+header .inner {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .inner h1 {
+    height: 25px;
+}
+header .inner nav {
+    background-color: #fff;
+    position: fixed; 
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    display: none;
+    padding: 0 20px;
+}
+header .inner nav .menu_close {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-bottom: 75px;
+}
+header .inner nav .menu_close img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+}
+header .inner nav ul .depth01 {
+    font-size: 18px;
+
+}
+header .inner nav ul .depth01::after {
+    content: '';
+    background: #333;
+    width: 100%;
+    height: 1px;
+    display: block;
+    margin: 25px 0;
+}
+header .inner nav ul .depth02 li {
+    color: #838383;
+    font-size: 16px;
+    margin-top: 15px;
+}
+header .inner nav ul .depth02 li:first-child {
+    margin-top: 20px;
+}
+
+
+.main_visual {
+    height: 750px;
+    position: relative;
+}
+.main_visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main_visual div {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 110px;
+    left: 0;
+}
+.main_visual div h2 {
+    font-size: 35px;
+    line-height: 1.3;
+    margin-bottom: 25px;
+    letter-spacing: -3px;
+}
+.main_visual div a {
+    width: 170px;
+    height: 45px;
+    border: 1px solid #333;
+    border-radius: 40px;
+    text-align: center;
+    line-height: 45px;
+    display: block;
+    margin: 0 auto;
+}
+
+.best .inner {
+    padding: 60px 0;
+}
+.best .inner h3 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.best .inner .best_menu {
+    display: flex;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    line-height: 1.3;
+}
+.best .inner .best_menu li {
+    margin-right: 15px;
+}
+.best .inner .best_menu li.on {
+    color: #ff0000;
+}
+.best .inner .list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    display: none;
+}
+.best .inner .list.on {
+    display: flex;
+}
+.best .inner .list .item {
+    width: calc(100% / 2 - 5px);
+    word-break: keep-all;
+}
+.best .inner .list .item figure {
+    width: 100%;
+}
+.best .inner .list .item figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.best .inner .list .item .text h4 {
+    margin: 10px 0 20px;
+    height: 36px;
+}
+.best .inner .list .item .text div p {
+    color: #8d8d8d;
+    text-decoration: line-through;
+    margin-bottom: 5px;
+}
+.best .inner .list .item .text div ul {
+    display: flex;
+    justify-content: space-between;
+}
+.best .inner .list .item .text div ul li {
+    font-weight: 700;
+}
+.best .inner .list .item .text div ul li:last-child {
+    color: #ff0000;
+}
+.best .inner a {
+    display: block;
+    width: 100%;
+    height: 35px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 35px;
+    margin-top: 30px;
+    border: 1px solid #333;
+    border-radius: 20px;
+}
+
+.event {
+    padding-bottom: 60px;
+}
+.event .inner .title {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+}
+.event .inner .title h3 {
+    font-size: 30px;
+}
+.event .inner .title a {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    padding-right: 10px;
+}
+.event .inner .title a::after {
+    content: '';
+    background: url('../img/arrow.png');
+    width: 6px;
+    height: 11px;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.event .inner .item figure {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.event .inner .item figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.event .inner .item div h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.event .inner .item div p {
+    line-height: 1.3;
+    margin-bottom: 30px;
+}
+.event .inner .item div span {
+    font-size: 14px;
+    color: #838383;
+}
+
+footer {
+    width: 100%;
+    background-color: #B70010;
+}
+footer p {
+    padding: 20px 0;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+}
